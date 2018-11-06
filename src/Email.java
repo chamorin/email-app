@@ -48,10 +48,19 @@ public class Email {
         }
         return new String(password);
     }
+
     // Set the mailbox capacity
+    public void setMailboxCapacity(int capacity) {
+        this.mailboxCapacity = capacity;
+    }
 
     // Set the alternate email
+    public void setAlternateEmail(String altEmail) {
+        this.alternateEmail = altEmail;
+    }
 
     // Change the password
-
+    public void changePassword(String newPassword) {
+        this.password = newPassword;
+    }
 }
