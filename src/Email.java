@@ -18,13 +18,11 @@ public class Email {
         System.out.println("EMAIL CREATED: "+this.firstName+" "+this.lastName);
 
         this.departement = setDepartment();
-        System.out.println("Department: "+this.departement);
 
         this.password = randomPassword(defaultPasswordLength);
         System.out.println("Password: "+this.password);
 
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + departement + "." + companySuffix;
-        System.out.println("NEW EMAIL IS: "+ email);
     }
 
     // Ask for the departement
@@ -62,5 +60,15 @@ public class Email {
     // Change the password
     public void changePassword(String newPassword) {
         this.password = newPassword;
+    }
+
+    public int getMailboxCapacity() { return mailboxCapacity; }
+    public String getAlternateEmail() { return alternateEmail; }
+    public String getPassword() { return password; }
+
+    public String showInfo() {
+        return "DISPLAY NAME: " + firstName + " " + lastName + "\n" +
+                "COMPANY EMAIL: " + email + "\n" +
+                "MAILBOX CAPACITY: " + mailboxCapacity + "mb";
     }
 }
